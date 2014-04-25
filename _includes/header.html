@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><html class="no-js ie-good" lang="en"><![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AdHoc LLC</title>
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+<!-- CSS -->
+<link rel='stylesheet' href='/assets/css/foundation.css'>
+
+<!-- Icons -->
+<link rel="shortcut icon" href="{{ site.url }}/assets/img/design/icons/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-57-precomposed.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-72-precomposed.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-114-precomposed.png">
+<link rel="apple-touch-icon" sizes="157x157" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-157-precomposed.png">
+
+<!-- Javascript -->
+<script src="/assets/js/vendor/modernizr.custom.js"></script>
+<script src="/assets/js/vendor/jquery.js"></script>
+<script src="/assets/js/foundation/foundation.js"></script>
+<script src="/assets/js/vendor/jquery.smooth-scroll.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      $('ul.nav a').smoothScroll();
+
+      $('p.subnav a').click(function(event) {
+        event.preventDefault();
+        var link = this;
+        $.smoothScroll({
+          scrollTarget: link.hash
+        });
+      });
+
+      $('#change-speed').on('click', function() {
+        var $p1 = $('ul.mainnav a').first(),
+            p1Opts = $p1.smoothScroll('options') || {};
+
+        p1Opts.speed = p1Opts.speed === 1400 ? 400 : 1400;
+        $p1.smoothScroll('options', p1Opts);
+      });
+
+      $('button.scrollsomething').click(function() {
+        $.smoothScroll({
+          scrollElement: $('div.scrollme'),
+          scrollTarget: '#findme'
+        });
+        return false;
+      });
+      $('button.scrollhorz').click(function() {
+        $.smoothScroll({
+          direction: 'left',
+          scrollElement: $('div.scrollme'),
+          scrollTarget: '.horiz'
+        });
+        return false;
+      });
+
+    });
+
+  </script>
+
+
+
+<script src="/assets/js/vendor/jquery.stellar.js"></script>
+
+<script>
+	$(function(){
+
+		$.stellar({
+		  horizontalOffset: 50,
+		  verticalOffset: 150
+		});
+
+	});
+</script>
+
+</head>
+<body>
+
+<div id="head">
+	<div class="row header">
+		<div class="large-3 columns">
+			<h1 role="banner"><a href="/">AdHoc</a></h1>
+		</div><!--/large 6-->
+
+		<div class="large-9 columns">
+			{% include nav.html %}
+		</div><!--/large 9-->
+
+	</div><!--/row header -->
+</div><!--/head -->

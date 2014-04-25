@@ -1,3 +1,6 @@
 name: Ad Hoc LLC
 markdown: redcarpet
 pygments: true
+
+#URL of site, include http://, do not include a trailing slash
+url: http://localhost:8888
