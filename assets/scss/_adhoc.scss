@@ -16,6 +16,7 @@ html, body {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 ol, ul {margin: 1em 0 1em 1.2em;}
@@ -130,7 +131,7 @@ nav {
     text-align: center;
     font-size: em-calc(28px);
     padding: 0; line-height: 1em;
-    @media #{$small} {font-size: em-calc(38px);}
+    @media #{$small} {font-size: em-calc(48px);}
     @media #{$medium} {font-size: em-calc(68px);}
     @media #{$large} {font-size: em-calc(72px);}
     span {background: rgba($adhoc-primary-color, .9); color: #fff; display: inline-block; padding: 0 .15em;}
@@ -145,7 +146,8 @@ nav {
 /*** Opening Pitch ***/
 
 .opening-pitch {
-  p {font-size: em-calc(18px); padding: 1em 0;}
+  p {font-size: em-calc(18px); padding: 2.75em 0;}
+  @media #{$small} {p {font-size: em-calc(20px);}}
   @media #{$medium} {p {font-size: em-calc(24px); padding: 2.25em 0;}}
 }
 
@@ -166,7 +168,6 @@ nav {
 
 }
 
-
 .head-shot {
   position: relative;
   top: 0;
@@ -176,9 +177,6 @@ nav {
 }
 
 .team-member {
-
-
-
 
   img.tint {display: block;}
   img.no-tint {display: none;}
@@ -231,6 +229,9 @@ form {
   height: 10em;
 }
 
+table#navigation-table {
+  width: 100%;
+}
 
 #content .row input[type="submit"] {
   background: $adhoc-body-content-color;
@@ -239,13 +240,11 @@ form {
   color: #fff;
   border-radius: .2em;
   font-size: 1.2em;
+  border-bottom: 5px solid darken($adhoc-body-content-color, 5);
   width: 100%;
   display: block;
+  &:hover, &:focus, &:active {background: lighten($adhoc-body-content-color,10); cursor: pointer;}
   -webkit-appearance: none;
-  @media #{$medium} {
-    width: auto;
-  }
-
 }
 
 .ss-form-entry {margin: 0 0 .75em 0;}
