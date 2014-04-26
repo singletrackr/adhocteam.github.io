@@ -20,44 +20,41 @@
 <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-114-precomposed.png">
 <link rel="apple-touch-icon" sizes="157x157" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-157-precomposed.png">
 
-<!-- Javascript -->
-<script src="/assets/js/vendor/modernizr.custom.js"></script>
-<script src="/assets/js/vendor/jquery.js"></script>
-<!-- <script src="/assets/js/foundation/foundation.js"></script> -->
-<script src="/assets/js/vendor/jquery.smooth-scroll.js"></script>
 
-<script>
-  $(document).ready(function() {
-    $('ul.nav a').smoothScroll();
-  });
-
-</script>
-
-<script src="/assets/js/vendor/jquery.stellar.js"></script>
 
 <!--
+<script src="/assets/js/scripts-no-touch.js"></script>
+-->
+
+<!--
+<script src="/assets/js/vendor/jquery.js"></script>
+<script src="/assets/js/vendor/jquery.stellar.js"></script>
+<script src="/assets/js/vendor/stellar-settings.js"></script>
+<script src="/assets/js/vendor/jquery.smooth-scroll.js"></script>
+<script src="/assets/js/vendor/scroll-settings.js"></script>
+-->
+
+<script src="/assets/js/vendor/modernizr.custom.js"></script>
+
 
 <script type="text/javascript">
 
   Modernizr.load({
-    test: Modernizr.touch,
-    nope : '/assets/js/vendor/jquery.stellar.js',
+      test: Modernizr.touch,
+      yep : ['jquery.js',
+            '/assets/js/vendor/jquery.smooth-scroll.js',
+            '/assets/js/vendor/scroll-settings.js'],
+
+      nope : ['/assets/js/vendor/jquery.js',
+            '/assets/js/vendor/jquery.stellar.js',
+            '/assets/js/vendor/jquery.smooth-scroll.js',
+            '/assets/js/vendor/scroll-settings.js',
+            '/assets/js/vendor/stellar-settings.js']
   });
 
 </script>
 
--->
 
-<script>
-	$(function(){
-
-		$.stellar({
-		  horizontalOffset: 50,
-		  verticalOffset: 150
-		});
-
-	});
-</script>
 
 </head>
 <body>
