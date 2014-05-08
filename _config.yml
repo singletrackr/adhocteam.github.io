@@ -3,4 +3,4 @@ markdown: redcarpet
 highlighter: true
 
 #URL of site, include http://, do not include a trailing slash
-url: http://localhost:8888
+url: http://adhocteam.us
