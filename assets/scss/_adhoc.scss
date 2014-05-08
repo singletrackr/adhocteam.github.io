@@ -198,8 +198,21 @@ nav {
   position: relative;
   top: 0;
   display: block;
-  img {}
-  img.tint {z-index: 800;}
+  img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  img.tint {
+    z-index: 800;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .team-member {
@@ -207,8 +220,16 @@ nav {
   img.tint {display: block;}
   img.no-tint {display: none;}
 
-  &:hover img.tint {display: none;}
-  &:hover img.no-tint {display: block;}
+  &:hover img.tint {display: none; -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;}
+  &:hover img.no-tint {display: block; -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;}
 }
 
 /*** Get in touch ***/
