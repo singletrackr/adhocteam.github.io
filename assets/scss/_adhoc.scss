@@ -1,5 +1,4 @@
 /*** AdHoc SCSS ***/
-/*** Danny Chapman, Greg Gershman ***/
 
 /*** Colors ***/
 $adhoc-primary-color: #9dd348;
@@ -34,7 +33,7 @@ a {
   color: $adhoc-body-content-color;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd {font-family: 'Lato', sans-serif; font-weight: 300; color: $adhoc-body-content-color;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd {font-family: 'Open Sans', sans-serif; font-weight: 300; color: $adhoc-body-content-color;}
 
 h2 {
   font-size: em-calc(36);
@@ -54,7 +53,7 @@ h5 {font-weight: 500; margin: 1.5em 0 0 0; padding: 0;}
 }
 
 h1 a {
-  text-indent: 100%;
+  text-indent: 120%;
   white-space: nowrap;
   overflow: hidden;
   display: block;
@@ -69,6 +68,12 @@ h1 a {
     height: 50px;
   }
 
+}
+
+html.lt-ie9 h1 a {
+  background: url(../img/design/logo-ie.png) top center no-repeat;
+  width: 226px;
+  height: 60px;
 }
 
 
@@ -125,7 +130,7 @@ nav {
   padding: 7.25em 0;
   @media #{$medium} {padding: 10em 0;}
   @media #{$large} {padding: 16em 0;}
-  background: url(../img/design/banner.jpg) center no-repeat;
+  background: url(../img/design/banner2.jpg) center no-repeat;
   background-size: cover;
   h2 {
     text-align: center;
@@ -140,6 +145,18 @@ nav {
   a {color: $adhoc-secondary-color;
     &:hover, &:active, &:focus {color: $adhoc-primary-color;}
   }
+}
+
+
+html.lt-ie9 .banner {
+  width: 100%;
+  float: left;
+  left: 0;
+  margin: 0 0 2em -.75em;
+}
+
+html.lt-ie9 .banner h2 span {
+  background: #9dd348;
 }
 
 /*** Banner Animation ***/
@@ -286,11 +303,15 @@ table#navigation-table {
   border: none;
   color: #fff;
   font-size: 1.2em;
-  border-bottom: 5px solid darken($adhoc-body-content-color, 5);
+
   width: 100%;
   display: block;
   &:hover, &:focus, &:active {background: lighten($adhoc-body-content-color,10); cursor: pointer;}
   -webkit-appearance: none;
+}
+
+html.cssanimations {
+  #content .row input[type="submit"] {border-bottom: 5px solid #606164;}
 }
 
 .ss-form-entry {margin: 0 0 .75em 0;}
