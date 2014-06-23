@@ -8,7 +8,7 @@
 <title>Ad Hoc LLC</title>
 
 <!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link rel='stylesheet' href='/assets/css/foundation.css'>
@@ -20,33 +20,18 @@
 <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-114-precomposed.png">
 <link rel="apple-touch-icon" sizes="157x157" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-157-precomposed.png">
 
-
-
-<!--
-<script src="/assets/js/scripts-no-touch.js"></script>
--->
-
-<!--
-<script src="/assets/js/vendor/jquery.js"></script>
-<script src="/assets/js/vendor/jquery.stellar.js"></script>
-<script src="/assets/js/vendor/stellar-settings.js"></script>
-<script src="/assets/js/vendor/jquery.smooth-scroll.js"></script>
-<script src="/assets/js/vendor/scroll-settings.js"></script>
--->
-
 <script src="/assets/js/vendor/modernizr.custom.js"></script>
-
+<script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
 
 <script type="text/javascript">
 
   Modernizr.load({
       test: Modernizr.touch,
-      yep : ['jquery-1.11.0.min.js',
-            '/assets/js/vendor/jquery.smooth-scroll.js',
+      yep : ['/assets/js/vendor/jquery.smooth-scroll.js',
             '/assets/js/vendor/scroll-settings.js'],
 
-      nope : ['/assets/js/vendor/jquery-1.11.0.min.js',
-            '/assets/js/vendor/jquery.stellar.js',
+
+      nope : ['/assets/js/vendor/jquery.stellar.js',
             '/assets/js/vendor/jquery.smooth-scroll.js',
             '/assets/js/vendor/scroll-settings.js',
             '/assets/js/vendor/stellar-settings.js']
@@ -55,11 +40,13 @@
 </script>
 
 
+
+
+
+
 <!-- IE 8 Shims -->
 <!-- http://foundation.zurb.com/forum/posts/241-foundation-5-and-ie8 -->
 <!--[if lt IE 9]>
-
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
   <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
   <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>

@@ -968,30 +968,30 @@ $default-float: left;
 
 // We use these to control the style of the reveal overlay.
 
-// $reveal-overlay-bg: rgba(#000, .45);
+ $reveal-overlay-bg: rgba(#000, .85);
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
 
-// $reveal-modal-bg: #fff;
+ $reveal-modal-bg: transparent;
 // $reveal-position-top: 50px;
-// $reveal-default-width: 80%;
+ $reveal-default-width: 80%;
 // $reveal-modal-padding: em-calc(20);
-// $reveal-box-shadow: 0 0 10px rgba(#000,.4);
+ $reveal-box-shadow: 0 0 0 rgba(#000,0);
 
 // We use these to style the reveal close button
 
 // $reveal-close-font-size: em-calc(22);
 // $reveal-close-top: em-calc(8);
 // $reveal-close-side: em-calc(11);
-// $reveal-close-color: #aaa;
+ $reveal-close-color: #fff;
 // $reveal-close-weight: bold;
 
 // We use these to control the modal border
 
-// $reveal-border-style: solid;
-// $reveal-border-width: 1px;
-// $reveal-border-color: #666;
+ $reveal-border-style: none;
+ $reveal-border-width: 0px;
+ $reveal-border-color: none;
 
 // $reveal-modal-class: "reveal-modal";
 // $close-reveal-modal-class: "close-reveal-modal";
@@ -1008,7 +1008,7 @@ $default-float: left;
 
 // These style the titles
 
-// $section-title-color: #333;
+ $section-title-color: #fff;
 // $section-title-color-active: #333;
 // $section-title-bg: #efefef;
 // $section-title-bg-active: darken($section-title-bg, $section-function-factor);

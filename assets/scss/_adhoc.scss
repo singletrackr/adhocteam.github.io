@@ -45,7 +45,7 @@ h2 {
 
 h3 {font-weight: bold; font-weight: 500; font-size: em-calc(18); margin: 0; }
 h4 {font-weight: 500; font-size: em-calc(26); color: $adhoc-body-content-color; line-height: 1.2em; margin-bottom: 0; padding-bottom: 0;}
-h5 {font-weight: 500; margin: .35em 0 1em 0; padding: 0; font-weight: 300; font-size: 1em;}
+h5 {font-weight: 500; margin: .35em 0 .5em 0; padding: 0; font-weight: 300; font-size: 1em; color: #fff; background: $adhoc-primary-color; display: inline-block; }
 
 /*** Logo / header ***/
 
@@ -200,42 +200,67 @@ html.lt-ie9 .banner h2 span {
   padding: 2em 0;
   background: rgba(0,0,0,.02);
   .row {margin-bottom: 2em;}
-  h3 {font-size: em-calc(44px); margin-bottom: 1em; color: $adhoc-primary-color; font-weight: 300;}
+  h3 {font-size: em-calc(44px); margin: .25em 0; color: $adhoc-primary-color; font-weight: 300;}
   h4 {padding-top: 0; font-weight: 300; margin-top: 0; span {font-weight: 700;}}
   hr {max-width: 60.8em; margin: 1em auto 3em auto; height: 4px; border: 0; background-color: $adhoc-body-accent-color;}
 
-  .team-member {
-    padding-bottom: 2em;
-    margin: 0;
+  .team-members {
+    img {}
   }
 
 }
 
+.reveal-modal {
+  p {color: #fff;}
+  img {float: left; margin: .5em 1.5em 1.5em 0; width: 35%;}
+}
+
+.close-reveal-modal {line-height: 1em;}
+
+.close-reveal-modal span {font-weight: normal; font-weight: 300; color: #fff; color: rgba(255,255,255,.7); font-size: .7em;  margin: 0; padding: 0; line-height: 1em;}
+
 .head-shot {
   position: relative;
   top: 0;
+  margin: .35em 0;
   display: block;
-  img {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+
+  h5 {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    }
+
+  span.more {
+    position: absolute;
+    bottom: -5em;
+    display: block;
+    &:hover {
+      bottom: 1em;
+    }
   }
-  img.tint {
-    z-index: 800;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+
+  img {
+
+    -webkit-filter: grayscale(.8);
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+
+      -webkit-filter: grayscale(0);
+
+    }
   }
 }
 
 .team-member {
 
 
-  img.no-tint {height: 0; -webkit-transition: all 0.3s ease-in-out;
+  img.no-tint {-webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -246,7 +271,7 @@ html.lt-ie9 .banner h2 span {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;}
-  &:hover img.no-tint {height: auto;}
+  &:hover img.no-tint {}
 }
 
 /*** Get in touch ***/
