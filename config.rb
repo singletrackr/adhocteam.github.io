@@ -6,5 +6,4 @@ images_dir = 'img/content'
 javascripts_dir = 'assets/js'
 relative_assets = true
 line_comments = true
-# output_style = :compressed
-output_style = :compressed # by Compass.app 
+output_style = :compressed
