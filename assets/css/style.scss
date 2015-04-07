@@ -1,3 +1,6 @@
+---
+---
+
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
@@ -8,7 +11,6 @@
 @import
   "foundation/components/global",
   "foundation/components/grid",
+  "foundation/components/block-grid",
   "foundation/components/type",
-  "foundation/components/reveal",
-  "foundation/components/buttons",
   "adhoc";

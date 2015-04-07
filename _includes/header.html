@@ -8,40 +8,19 @@
 <title>Ad Hoc LLC</title>
 
 <!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-
-<!-- CSS -->
-<link rel='stylesheet' href='/assets/css/foundation.css'>
 
 <!-- Icons -->
-<link rel="shortcut icon" href="{{ site.url }}/assets/img/design/icons/favicon.png" type="image/x-icon">
-<link rel="apple-touch-icon" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-57-precomposed.png">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-72-precomposed.png">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-114-precomposed.png">
-<link rel="apple-touch-icon" sizes="157x157" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-157-precomposed.png">
+<link href="/images/design/icons/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+<link href="/images/design/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+<link href="/images/design/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+<link href="/images/design/icons/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+<link rel="shortcut icon" href="/images/design/icons/favicon.png" />
 
-<script src="/assets/js/vendor/modernizr.custom.js"></script>
-<script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+<!-- CSS -->
+<link rel='stylesheet' href='/assets/css/style.css?v={{ site.github.build_revision }}'>
 
-<script type="text/javascript">
-
-  Modernizr.load({
-      test: Modernizr.touch,
-      yep : ['/assets/js/vendor/jquery.smooth-scroll.js',
-            '/assets/js/vendor/scroll-settings.js'],
-
-
-      nope : ['/assets/js/vendor/jquery.stellar.js',
-            '/assets/js/vendor/jquery.smooth-scroll.js',
-            '/assets/js/vendor/scroll-settings.js',
-            '/assets/js/vendor/stellar-settings.js']
-  });
-
-</script>
-
-
-
-
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
 
 
 <!-- IE 8 Shims -->
@@ -54,16 +33,22 @@
 <![endif]-->
 
 
+<!-- JavaScript -->
+<script src="/assets/js/vendor/modernizr.custom.js"></script>
+<script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+
 </head>
 <body>
 
-<div class="row header">
-	<div class="large-3 columns">
-		<h1 role="banner"><a href="/">Ad Hoc</a></h1>
-	</div><!--/large 6-->
+<div class="header">
+	<div class="row">
+		<div class="small-12 large-4 columns">
+			<h1 role="banner"><a href="/">Ad Hoc</a></h1>
+		</div>
 
-	<div class="large-9 columns">
-		{% include nav.html %}
-	</div><!--/large 9-->
+		<div class="small-12 large-9 columns">
+			{% include nav.html %}
+		</div>
 
-</div><!--/row header -->
+	</div>
+</div>
