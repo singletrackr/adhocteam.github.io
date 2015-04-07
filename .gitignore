@@ -3,3 +3,4 @@ _site/
 images/*.jpg
 .sass_cache/*
 .ruby-version
+.ruby-gemset
