@@ -68,7 +68,7 @@ h1 a {
 // Type
 
 h1, h2, h3, h4, h5, h6 {
-
+  font-weight: 300;
 }
 
 p, ul, ol, dl, {
@@ -125,10 +125,63 @@ nav {
         color: $primary-color;
         border-bottom: 5px solid rgba(0,0,0,.2);
       }
-      }
+    }
+  }
+}
+
+
+// Primary content area
+
+.primary {
+  blockquote {
+    border-left: none;
+    text-align: center;
+    font-size: 1.25em;
+  }
+}
+
+// Team Block Grids
+
+ul.team {
+  li {
+
+    img {width: 100%;}
+    .about {
+      position: relative;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      h3, p {margin: 0; padding: 0;}
+      h3 {font-size: 1.2em; font-weight: 500;}
+      p.title {font-size: .85em; font-style: italic; padding-bottom: .75em; color: #777;}
+      .description {font-size: .8em;}
+      &:hover {}
+      ul {margin: 0; padding: 1em 0;}
+      li {list-style: none; margin: 0; border-bottom: none; padding: 0;}
+    /*  &.paul {background: url(../img/content/paul.jpg) center no-repeat; background-size: cover;}
+      &.greg {background: url(../img/content/greg.jpg) center no-repeat; background-size: cover;}
+      &.bill {background: url(../img/content/bill.jpg) center no-repeat; background-size: cover;}
+      &.danny {background: url(../img/content/danny.jpg) center no-repeat; background-size: cover;}
+      */
+    }
+
+    .name {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+
+    }
+
+  &:hover {
+
+  }
+
   }
 
 }
+
 
 // Cards
 
@@ -162,8 +215,22 @@ nav {
 // Footer
 
 footer {
-  .small-12 {
-    border-top: 2px solid rgba(0,0,0,.1);
-    padding: 1em 0;
+  background: rgba(0,0,0,.03);
+  padding: 5em 0;
+  ul {margin: 0; padding: 0;}
+  li {list-style: none; display: inline-block; line-height: 1em; padding: 0; margin: 0;
+    a {display: block; padding: 0 1em; margin: 0; line-height: 1em; }
+    }
+
+  p {margin: 0; padding: 0;}
+
+  .action {text-align: right;}
+  a.button {
+    margin: 0;
+    padding: 1em 2em;
+    border: 2px solid $primary-color;
+    line-height: 1em;
+    &:hover, &:focus, &:active {background: $primary-color; color: #fff; }
   }
-}
+
+  }
