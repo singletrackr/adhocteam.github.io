@@ -133,10 +133,7 @@ nav {
 // Home Page
 
 .home {
-
   .case-button {
-    border: 1px solid red;
-
     &:after {
       visibility: hidden;
      display: block;
@@ -149,8 +146,7 @@ nav {
 
 
   .row {
-    width: 100%;
-    max-width: none;
+
   }
 
   .pitch {
