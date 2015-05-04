@@ -118,6 +118,7 @@ nav {
     padding: 0 1em;
     a {
       display: block;
+      text-align: right;
       padding: .5em 0;
       color: $secondary-color;
       border-bottom: 5px solid #fff;
@@ -125,6 +126,52 @@ nav {
         color: $primary-color;
         border-bottom: 5px solid rgba(0,0,0,.2);
       }
+    }
+  }
+}
+
+// Home Page
+
+.home {
+
+  .case-button {
+    border: 1px solid red;
+
+    &:after {
+      visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+    }
+  }
+
+
+  .row {
+    width: 100%;
+    max-width: none;
+  }
+
+  .pitch {
+    background: #9DD349;
+    color: #fff;
+    padding: .25em 1em;
+    height: 30em;
+    p {
+      padding: 1em 0;
+      font-size: 1.5em;
+    }
+  }
+
+  a {
+    margin: 0;
+    padding: .25em 1em;
+    display: block;
+    height: 10em;
+    background: #ddd;
+    &:hover {
+      background: #eee;
     }
   }
 }
