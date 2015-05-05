@@ -149,29 +149,26 @@ nav {
 
   }
 
-  .pitch {
-    background: #9DD349;
-    color: #fff;
-    padding: .25em 1em;
-    height: 30em;
-    p {
-      padding: 1em 0;
-      font-size: 1.5em;
-    }
-  }
-
   a {
     margin: 0;
     padding: .25em 1em;
-    display: block;
-    height: 10em;
-    background: #ddd;
-    &:hover {
-      background: #eee;
-    }
   }
 }
 
+
+// Pitch
+
+.pitch {
+  background: #9DD349;
+  padding: 3em 1em;
+  &.home {color: #fff;}
+
+  &.second, &.third, &.fourth {padding: 3em 0;}
+
+  &.second {background: #ccc;}
+  &.third {background: #ddd; }
+  &.fourth {background: #eee;}
+}
 
 // Primary content area
 
@@ -258,7 +255,7 @@ ul.team {
 // Footer
 
 footer {
-  background: rgba(0,0,0,.03);
+  background: #fff;
   padding: 5em 0;
   ul {margin: 0; padding: 0;}
   li {list-style: none; display: inline-block; line-height: 1em; padding: 0; margin: 0;
