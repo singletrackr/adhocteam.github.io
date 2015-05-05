@@ -161,7 +161,7 @@ nav {
 .pitch {
   background: #9DD349;
   padding: 3em 1em;
-  &.home {color: #fff;}
+  &.home {color: #fff; p {font-size: 1.4em;}}
 
   &.second, &.third, &.fourth {padding: 3em 0;}
 
