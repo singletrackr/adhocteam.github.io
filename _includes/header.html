@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ad Hoc, LLC</title>
+<title>Ad Hoc</title>
 
 <!-- Fonts -->
 
@@ -19,12 +19,18 @@
 <script src="/assets/js/vendor/modernizr.custom.js"></script>
 <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
 
-
-<!-- CSS -->
 <link rel='stylesheet' href='/assets/css/style.css?v={{ site.github.build_revision }}'>
 
-<!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'vhb1ims',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 
 
 <!-- IE 8 Shims -->
@@ -35,8 +41,6 @@
   <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 <![endif]-->
-
-
 
 
 <!-- JavaScript -->
@@ -57,4 +61,4 @@
 		</div>
 
 	</div>
-</div>
+</div>  
