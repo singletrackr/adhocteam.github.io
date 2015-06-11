@@ -2,3 +2,4 @@
 _site/
 images/*.jpg
 .sass_cache/*
+.ruby-version
