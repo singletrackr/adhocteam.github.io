@@ -5,6 +5,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta content='website' property='og:type'>
 <title>Ad Hoc</title>
 
 <!-- Fonts -->
@@ -16,11 +19,10 @@
 <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-114-precomposed.png">
 <link rel="apple-touch-icon" sizes="157x157" href="{{ site.url }}/assets/img/design/icons/apple-icon-touch-157-precomposed.png">
 
-<script src="/assets/js/vendor/modernizr.custom.js"></script>
-<script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
-
 <link rel='stylesheet' href='/assets/css/style.css?v={{ site.github.build_revision }}'>
 
+<link type="text/plain" rel="author" href="{{ site.url }}/humans.txt" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Feed" href="http://dannychapman.com/feed/">
 
 <script>
   (function(d) {
@@ -33,32 +35,34 @@
 </script>
 
 
-<!-- IE 8 Shims -->
-<!-- http://foundation.zurb.com/forum/posts/241-foundation-5-and-ie8 -->
-<!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-<![endif]-->
+<script src="{{ site.url }}/assets/js/vendor/modernizr.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/jquery-1.7.2.min.js"></script>
 
 
-<!-- JavaScript -->
-<script src="/assets/js/vendor/modernizr.custom.js"></script>
-<script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+
+<link rel="stylesheet" href="{{ site.url }}/assets/css/animate.css">
+
+
+
+<script src="{{ site.url }}/assets/js/vendor/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+
+
 
 </head>
-<body>
+<body class="{{ page.layout }} post{{ page.id | replace:"/","-" }}">
 
 <div class="header">
 	<div class="row">
-		<div class="small-12 large-3 columns">
+		<div class="small-3 large-3 columns">
 			<h1 role="banner"><a href="/">Ad Hoc</a></h1>
 		</div>
 
-		<div class="small-12 large-7 columns">
+		<div class="small-7 large-7 columns text-right">
 			{% include nav.html %}
 		</div>
 
 	</div>
-</div>  
+</div>
