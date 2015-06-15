@@ -94,7 +94,73 @@ p, ul, ol, dl, {
   @media #{$medium} {padding: 8em 0;}
   @media #{$large} {padding: 10em 0;}
   h2, p {padding: 0; margin: 0; color: #fff; font-weight: 300;}
+
+  &.healthcare {
+    background: #fff;
+
+    @media #{$small} {padding: 2em 0 0 0;}
+    @media #{$medium} {padding: 2em 0 0 0;}
+    @media #{$large} {padding: 2em 0 0 0;}
+    h2 {color: $primary-color; font-weight: 700; margin: 0; padding: 0; font-size: 3em; text-align: left;}
+  }
+
+  &.posts {
+    @media #{$small} {padding: 2em 0 0 0;}
+    @media #{$medium} {padding: 2em 0 0 0;}
+    @media #{$large} {padding: 2em 0 2em 0;}
+    h2 a {color: #fff !important; text-align: left !important; font-weight: 600; padding: 2em 0;}
+  }
+
 }
+
+.post {
+  h3 {color: $primary-color; }
+  p {color: #444; text-align: left;}
+
+}
+
+.case-study {
+  h2, h3, h4, h5, h6 {
+    color: $primary-color;
+    font-weight: 700;
+  }
+
+  blockquote {
+    margin: 2em 0;
+    font-size: 1.5em;
+    border-left: 3px solid rgba($primary-color, .3);
+  }
+
+  .sidebar {
+    font-size: .85em;
+    a.button {
+      padding: .75em 3.5em;
+    }
+    ul {
+      margin: 0 0 2em 0;
+      padding: 0;
+      li {
+        list-style: none;
+        border-bottom: 1px solid #eee;
+        &:last-of-type { border-bottom: none;}
+        padding: .25em 0;
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+p.feature {
+  font-weight: 400;
+  font-size: 1.25em;
+  padding: 2em 0 0 0;
+  line-height: 1.35em;
+  color: #555;
+  text-align: left;
+}
+
+img.feature {width: 100%; height: auto; margin-bottom: 2em;}
 
 h2 {color: $primary-color; padding-bottom: 1em;}
 
@@ -201,10 +267,10 @@ a.bar {
 blockquote {
   margin-top: 0; padding-top: 0;
   border-left: 2px solid #ddd;
-  margin-bottom: 2.5em;
+  margin-bottom: 3em;
   line-height: 1.2em;
   p {
-    font-size: 1.5em;
+    font-size: 1.55em;
     font-weight: 500;
     color: $primary-color;
     margin: 0; padding: 0;
