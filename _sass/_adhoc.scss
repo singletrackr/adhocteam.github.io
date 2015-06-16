@@ -57,8 +57,8 @@ h1 a {
   background-size: contain;
   @media #{$small} {
     background: url(../img/design/logo/logo.png) top center no-repeat;
-    width: 216px;
-    height: 45px;
+    width: 180px;
+    height: 35px;
     background-size: contain;
   }
 }
@@ -215,13 +215,51 @@ nav {
 // Pitch
 
 a.bar {
+  position: relative;
    margin: 0; display: block; width: 100%;
+   -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
    border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;}
-  &:hover, &:active {
-    border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;} text-decoration: none !important;
+  svg {
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
   }
+  &:hover, &:active {
+    background: rgba(0,0,0,.1);
+    border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;} text-decoration: none !important;
+    svg {color: $secondary-color;}
+  }
+
+
+
 }
 
+.description-wrap {
+  position: relative;
+  svg {
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    color: rgba(0,0,0,.2);
+    right: 0;
+    position: absolute;
+    top: 40%;
+  }
+  &.two {
+    position: relative;
+    svg {
+    left: 0;
+    right: auto;
+    position: absolute;
+    top: 40%;
+    }
+  }
+}
 .pitch {
   a {display: block; border-bottom: none; border-top: none; text-decoration: none;}
   @media #{$small} {padding: 3em 0;}
@@ -241,13 +279,19 @@ a.bar {
       background: #fff url(../img/content/healthcare.png) top right no-repeat;
       background-size: 50%;
       padding: 1.5em 0;
-      h3 {font-size: 1.5em;}
-      span {font-size: 1em;}
+      h3 {font-size: 1.5em; line-height: 1.2em;}
+      span {
+        font-size: 1em;
+        padding-right: 2em;
+        position: relative;
+        display: block;
+        margin-top: .5em;
+      }
 
       @media #{$large} {
         padding: 4.5em 0;
         h3 {font-size: 2em;}
-        span {font-size: 1.5em;}
+        span {font-size: 1.35em;}
       }
     }
   }
@@ -256,6 +300,10 @@ a.bar {
   &.third {
     padding: 1em 0;
     background: #fff url(../img/content/cui-small.png) top center no-repeat; background-size: cover;
+    span {
+      padding-right: 0;
+      padding-left: 2em;
+    }
     @media #{$small} {
       background: #fff url(../img/content/cui-small.png) top left no-repeat;
       background-size: 50%;
@@ -682,6 +730,7 @@ button#trigger-overlay {
   display: inline-block;
   letter-spacing: 0.05em;
   padding: .5em;
+  margin-bottom: 0;
   }
 
 .overlay nav {
@@ -757,4 +806,13 @@ button#trigger-overlay {
 	.overlay ul li {
 		min-height: 34px;
 	}
+}
+
+// SVG
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
 }
