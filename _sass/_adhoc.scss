@@ -95,13 +95,13 @@ p, ul, ol, dl, {
   @media #{$large} {padding: 10em 0;}
   h2, p {padding: 0; margin: 0; color: #fff; font-weight: 300;}
 
-  &.healthcare {
+  &.study {
     background: #fff;
 
     @media #{$small} {padding: 2em 0 0 0;}
     @media #{$medium} {padding: 2em 0 0 0;}
     @media #{$large} {padding: 2em 0 0 0;}
-    h2 {color: $primary-color; font-weight: 700; margin: 0; padding: 0; font-size: 3em; text-align: left;}
+    h2 {color: $primary-color; font-weight: 700; margin: 0; padding: 0; font-size: 1.3em; @media #{$medium} {font-size: 3em;} text-align: left;}
   }
 
   &.posts {
@@ -132,6 +132,9 @@ p, ul, ol, dl, {
   }
 
   .sidebar {
+    background: rgba(0,0,0,.05);
+    padding-top: 1em;
+    @media #{$small} {background: none; padding-top: 0;}
     font-size: .85em;
     a.button {
       padding: .75em 3.5em;
@@ -153,14 +156,14 @@ p, ul, ol, dl, {
 
 p.feature {
   font-weight: 400;
-  font-size: 1.25em;
+  @media #{$medium} {font-size: 1.25em;}
   padding: 2em 0 0 0;
   line-height: 1.35em;
   color: #555;
   text-align: left;
 }
 
-img.feature {width: 100%; height: auto; margin-bottom: 2em;}
+img.feature {width: 100%; height: auto; margin-bottom: 2em; border: 1px solid #ddd; -webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);}
 
 h2 {color: $primary-color; padding-bottom: 1em;}
 
@@ -213,8 +216,9 @@ nav {
 
 a.bar {
    margin: 0; display: block; width: 100%;
+   border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;}
   &:hover, &:active {
-    border-bottom: none !important; text-decoration: none !important;
+    border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;} text-decoration: none !important;
   }
 }
 
@@ -223,18 +227,45 @@ a.bar {
   @media #{$small} {padding: 3em 0;}
   &.home {color: #fff; p {font-size: 1.4em; padding-bottom: 2em;}}
 
-  &.second, &.third, &.fourth {padding: 3em 0; background: #fff;}
+  &.second, &.third, &.fourth {background: #fff;}
 
-  &.second {
-    padding: 2em 0;
+
+
+
+  &.second, &.third {
+    padding: 1em 0;
+    background: #fff url(../img/content/healthcare.png) center center no-repeat; background-size: cover;
 
 
     @media #{$small} {
-      background: #fff url(../img/content/healthcare.jpg) top right no-repeat;
-      background-size: 49%;
-      padding: 10em 0;
+      background: #fff url(../img/content/healthcare.png) top right no-repeat;
+      background-size: 50%;
+      padding: 1.5em 0;
+      h3 {font-size: 1.5em;}
+      span {font-size: 1em;}
+
+      @media #{$large} {
+        padding: 4.5em 0;
+        h3 {font-size: 2em;}
+        span {font-size: 1.5em;}
       }
+    }
   }
+
+
+  &.third {
+    padding: 1em 0;
+    background: #fff url(../img/content/cui-small.png) top center no-repeat; background-size: cover;
+    @media #{$small} {
+      background: #fff url(../img/content/cui-small.png) top left no-repeat;
+      background-size: 50%;
+      }
+      @media #{$large} {
+        padding: 4.5em 0;
+      }
+
+    }
+
 
   img {width: 100%;}
 
@@ -249,12 +280,40 @@ a.bar {
  span {color: $secondary-color; font-size: 1.35em;}
 
   &.home {
-    h2 {color: #fff; padding-bottom: 1em; @media #{$small} {font-size: 3.5em;}}
+    h2 {color: #fff; padding-bottom: 1em; @media #{$small} {font-size: 2.8em;}  @media #{$medium} {font-size: 3.4em;}}
+  }
+}
+
+// Action buttons
+
+.action-button {
+  .button-wrap {
+    background:#555;
+    background: rgba(0,0,0,.7);
+    padding-left: .65em;
+    display: inline-block;
+    position: abosolute;
+    bottom: 0;
+    @media #{$small} {background: none; padding: 0; bottom: inherit; position: inherit;}
+    }
+  h3, span {
+    color: #fff;
+    margin: 0;
+    display: block;
+    line-height: 1.5em;
+    padding: .35em;
+    @media #{$small} {background: none; color: inherit; padding: inherit; display: inherit; margin: 0; line-height: inherit; padding: inherit;}
+  }
+
+  span {
+    clear: both;
+    display: inline-block;
+    font-size: .85em;
+    padding: .7em;
+    @media #{$small} {display: inherit; font-size: inherit; padding: inherit; margin: inherit; color: #555;}
   }
 
 }
-
-
 
 
 // Primary content area
@@ -267,19 +326,24 @@ a.bar {
 blockquote {
   margin-top: 0; padding-top: 0;
   border-left: 2px solid #ddd;
-  margin-bottom: 3em;
+  @media #{$small} {margin-bottom: 3em;}
   line-height: 1.2em;
   p {
-    font-size: 1.55em;
+    @media #{$small} {font-size: 1.15em;}
     font-weight: 500;
     color: $primary-color;
     margin: 0; padding: 0;
     }
+  p.source {
+    @media #{$small} {font-size: .8em;}
+    color: #777;
+  }
+
 }
 
 // Team Block Grids
 
-ul.team {
+ul.team, ul.cases {
   li {
     .about {
       position: relative;
@@ -366,6 +430,28 @@ ul.team {
               }
             }
 
+            &.window-shopping {
+              background: url(../img/content/healthcare.png) top center no-repeat;
+              background-size: cover;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+              &:hover {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+                }
+              }
+
+            &.patient-evaluations {
+              background: url(../img/content/cui-small.png) top center no-repeat;
+              background-size: cover;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+              &:hover {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+                }
+              }
+
         }
 
   .description {
@@ -405,8 +491,21 @@ ul.team {
     background: rgba(0,0,0,.5);
     h3 {color: #fff;}
     width: 100%;
+    span {color: $primary-color;}
+    &:hover span {color: $primary-color;}
     }
   }
+}
+
+ul.cases li {
+  min-height: 14em;
+  .name {
+    -webkit-transition: all .24s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  &:hover .name {padding: 1em .5em; background: rgba(0,0,0,.8);}
 }
 
 html.touch ul.team {
@@ -648,6 +747,7 @@ button#trigger-overlay {
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 	transition: transform 0.4s, opacity 0.4s;
 }
+
 
 @media screen and (max-height: 30.5em) {
 	.overlay nav {
