@@ -170,8 +170,10 @@ h2 {color: $primary-color; padding-bottom: 1em;}
 .primary {
   /*  background: rgba(0,0,0,.04); */
   padding: 1em 0;
+
   @media #{$small} {padding: 2em 0;}
   @media #{$medium} {padding: 4em 0;}
+  h2 {font-size: 3em; font-weight: 700; padding-bottom: .5em;}
   h3 {
     padding: 0 0 .5em 0;
   }
@@ -221,7 +223,7 @@ a.bar {
    -moz-transition: all .1s ease-in-out;
    -o-transition: all .1s ease-in-out;
    transition: all .1s ease-in-out;
-   border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;}
+   border-bottom: 3px solid #fff; @media #{$small} {border-bottom: none;}
   svg {
     -webkit-transition: all .1s ease-in-out;
     -moz-transition: all .1s ease-in-out;
@@ -230,7 +232,7 @@ a.bar {
   }
   &:hover, &:active {
     background: rgba(0,0,0,.1);
-    border-bottom: 12px solid #fff; @media #{$small} {border-bottom: none;} text-decoration: none !important;
+    border-bottom: 3px solid #fff; @media #{$small} {border-bottom: none;} text-decoration: none !important;
     svg {color: $secondary-color;}
   }
 
@@ -271,8 +273,8 @@ a.bar {
 
 
   &.second, &.third {
-    padding: 1em 0;
-    background: #fff url(../img/content/healthcare.png) center center no-repeat; background-size: cover;
+    padding: 0;
+    background: #fff url(../img/content/healthcare-mobile.jpg) center center no-repeat; background-size: cover;
 
 
     @media #{$small} {
@@ -298,11 +300,10 @@ a.bar {
 
 
   &.third {
-    padding: 1em 0;
-    background: #fff url(../img/content/cui-small.png) top center no-repeat; background-size: cover;
+    background: #fff url(../img/content/cui-mobile.jpg) top center no-repeat; background-size: cover;
     span {
       padding-right: 0;
-      padding-left: 2em;
+      @media #{$small} {padding-left: 2em;}
     }
     @media #{$small} {
       background: #fff url(../img/content/cui-small.png) top left no-repeat;
@@ -335,29 +336,32 @@ a.bar {
 // Action buttons
 
 .action-button {
+  position: relative;
   .button-wrap {
     background:#555;
+    padding: .25em .5em;
+    margin: 3em 1em 0 0;
     background: rgba(0,0,0,.7);
     padding-left: .65em;
     display: inline-block;
-    position: abosolute;
-    bottom: 0;
     @media #{$small} {background: none; padding: 0; bottom: inherit; position: inherit;}
     }
   h3, span {
     color: #fff;
     margin: 0;
+    font-size: .8em;
     display: block;
     line-height: 1.5em;
-    padding: .35em;
+    padding: 0;
     @media #{$small} {background: none; color: inherit; padding: inherit; display: inherit; margin: 0; line-height: inherit; padding: inherit;}
   }
 
+  h3 {font-size: 1em;}
+
   span {
     clear: both;
-    display: inline-block;
+    display: block;
     font-size: .85em;
-    padding: .7em;
     @media #{$small} {display: inherit; font-size: inherit; padding: inherit; margin: inherit; color: #555;}
   }
 
@@ -379,7 +383,7 @@ blockquote {
   p {
     @media #{$small} {font-size: 1.15em;}
     font-weight: 500;
-    color: $primary-color;
+    color: $secondary-color;
     margin: 0; padding: 0;
     }
   p.source {
@@ -546,7 +550,15 @@ ul.team, ul.cases {
 }
 
 ul.cases li {
-  min-height: 14em;
+  a {
+    display: block;
+    padding: .5em;
+    background: rgba(0,0,0,.05);
+    &:hover {background: rgba(0,0,0,.1);}
+    border-bottom: none;
+    text-decoration: none;
+    h3 {display: block; padding: 0; margin: 0; font-size: 1.25em;}
+  }
   .name {
     -webkit-transition: all .24s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -611,31 +623,47 @@ html.touch ul.team {
 // Footer
 
 footer {
-  padding: 2em 0 0 0;
-  @media #{$small} {padding: 5em 0;}
+  padding: 1em 0 1em 0;
+  color: #fff;
+  @media #{$large} {padding: 5em 0;}
   a {
     &:hover {border-bottom: none;}
     border-bottom: none;
   }
-  ul {margin: 0; padding: 0; text-align: center; @media #{$large} {text-align: left;} }
+  ul {margin: 0; padding: 0;}
   li {list-style: none; display: inline-block; line-height: 1em; padding: 0; margin: 0;
-    a {display: block; padding: 0 1em; color: #fff; margin: 0; line-height: 1em;  }
+    a {display: block; padding: 0 1em; color: #fff; margin: 0; line-height: 1em;   }
     }
 
-  p {margin: 0; padding: 0;}
+  p {margin: 0; padding: 0; @media #{$small} {padding: 0 .5em 0 0;} font-size: .85em; display: inline-block; color: #fff; font-weight: 600;}
 
   .action {
-    padding: 2em 1em;
-    @media #{$small} {padding: 2em 1em 0 1em; text-align: right;}
+    padding: 0 1em 2em 0;
+    text-align: center;
+    font-size: 1.5em;
+    @media #{$small} {padding: 0 1em 0 1em;}
+    @media #{$large} {text-align: left;}
     @media #{$large} {padding: 0 1em 0 1em;}
     }
+
+    .social {
+      text-align: center;
+      margin: 1em 0;
+      font-size: .85em;
+      a {opacity: .7; &:hover {opacity: 1; color: #fff;}}
+      li {@media #{$large} {text-align: right;}}
+    }
+
   a.button {
-    margin: 0;
-    padding: 1em 2em;
+    margin: 1em auto;
+    @media #{$large} {margin: 0 auto;}
+    padding: .75em 1.75em;
     color: #fff;
     border: 2px solid #fff;
     font-weight: 600;
     line-height: 1em;
+    font-size: .85em;
+    display: inline-block;
     background: none;
     &:hover, &:focus, &:active {background: $primary-color; color: $primary-color; background: #fff;}
   }
@@ -753,7 +781,7 @@ button#trigger-overlay {
 .overlay ul li {
   display: block;
   text-align: center;
-  height: calc(100% / 3);
+  height: calc(100% / 4);
   min-height: 54px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -810,8 +838,9 @@ button#trigger-overlay {
 // SVG
 
 .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
+  display: none;
+  @media #{$small} {display: inline-block;}
+	width: 1.1em;
+	height: 1.1em;
 	fill: currentColor;
 }
