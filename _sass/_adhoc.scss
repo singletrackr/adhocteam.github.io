@@ -12,11 +12,15 @@ $body-background-color: #fff;
 // General
 
 html, body {
-  background: $primary-color;
   font-family: "proxima-nova", sans-serif;
   color: $body-content-color;
   color: #444;
   font-size: 18px;
+}
+
+html, body {
+  background: $primary-color url(../img/design/penrose.png) top center no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -78,7 +82,6 @@ p, ul, ol, dl, {
 // Header
 
 .header {
-  background: $primary-color;
   color: #fff;
   padding: 1em 0;
 }
@@ -134,20 +137,56 @@ p, ul, ol, dl, {
   .sidebar {
     background: rgba(0,0,0,.05);
     padding-top: 1em;
+    h2, h3, h4, h5, h6 {color: $secondary-color; font-size: 1.2em;}
     @media #{$small} {background: none; padding-top: 0;}
     font-size: .85em;
-    a.button {
+    a {
+      -webkit-transition: all .15s ease-in-out;
+      overflow: hidden;
+
+      -moz-transition: all .15s ease-in-out;
+      -o-transition: all .15s ease-in-out;
+      transition: all .15s ease-in-out;
+      text-decoration: none;
+      border-bottom: none;
+      display: block;
+      padding: .2em 0 .2em 0;
+      .icon.icon-github {
+        float: right;
+        -webkit-transition: all .15s ease-in-out;
+        -moz-transition: all .15s ease-in-out;
+        -o-transition: all .15s ease-in-out;
+        transition: all .15s ease-in-out;
+        margin: .45em .25em 0 0;
+        text-decoration: none;
+        position: relative;
+        opacity: 0;
+        }
+      &:hover {
+        background: rgba(0,0,0,.05); padding: .2em 0 .2em .2em; .icon.icon-github {display: inline-block; opacity: 1;}
+      }
+      &.button {
       padding: .75em 3.5em;
+      }
     }
+    p {padding: .25em 0; font-size: 1em;}
     ul {
       margin: 0 0 2em 0;
       padding: 0;
       li {
         list-style: none;
+        clear: both;
+        font-size: .9em;
         border-bottom: 1px solid #eee;
         &:last-of-type { border-bottom: none;}
-        padding: .25em 0;
+        padding: 0;
         margin: 0;
+        img.profile {border-radius: 10em; height: 1.5em; margin: .25em .5em .25em 0;}
+
+      }
+
+      &.listing {
+        li {padding: .25em 0;}
       }
     }
   }
@@ -625,6 +664,7 @@ html.touch ul.team {
 footer {
   padding: 1em 0 1em 0;
   color: #fff;
+  background: $primary-color url(../img/design/penrose.png) top center no-repeat;
   @media #{$large} {padding: 5em 0;}
   a {
     &:hover {border-bottom: none;}
@@ -732,7 +772,7 @@ table#navigation-table {
   left: 0;
   margin: 0;
   z-index: 400;
-  background: rgba($secondary-color,0.92);
+  background: rgba($secondary-color,0.92)
 }
 
 .overlay .overlay-close {
