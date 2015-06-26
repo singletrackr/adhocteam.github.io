@@ -138,6 +138,7 @@ p, ul, ol, dl, {
     background: rgba(0,0,0,.05);
     padding-top: 1em;
     h2, h3, h4, h5, h6 {color: $secondary-color; font-size: 1.2em;}
+    h4 {margin: 0; padding: 0;}
     @media #{$small} {background: none; padding-top: 0;}
     font-size: .85em;
     a {
@@ -167,6 +168,7 @@ p, ul, ol, dl, {
       }
       &.button {
       padding: .75em 3.5em;
+      background: $secondary-color;
       }
     }
     p {padding: .25em 0; font-size: 1em;}
@@ -196,22 +198,28 @@ p, ul, ol, dl, {
 p.feature {
   font-weight: 400;
   @media #{$medium} {font-size: 1.25em;}
-  padding: 2em 0 0 0;
+  padding: 1em 0 1em 0;
   line-height: 1.35em;
   color: #555;
   text-align: left;
 }
 
-img.feature {width: 100%; height: auto; margin-bottom: 2em; border: 1px solid #ddd; -webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);}
+img.feature {width: 100%; height: auto; border: 1px solid #ddd; -webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);}
+
+.write-up {
+  padding: 2em 0;
+  background: rgba(0,0,0,.04);
+}
 
 h2 {color: $primary-color; padding-bottom: 1em;}
 
-.primary {
+.primary.interior {
   /*  background: rgba(0,0,0,.04); */
-  padding: 1em 0;
+   padding: 1em 0 0 0;
 
   @media #{$small} {padding: 2em 0;}
   @media #{$medium} {padding: 4em 0;}
+
   h2 {font-size: 3em; font-weight: 700; padding-bottom: .5em;}
   h3 {
     padding: 0 0 .5em 0;
@@ -436,6 +444,19 @@ blockquote {
 
 ul.team, ul.cases {
   li {
+    position: relative;
+    .name {
+      -webkit-transition: all .1s ease-in-out;
+      -moz-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
+    }
+
+    &:hover {
+    .name {
+      opacity: 0;
+    }
+    }
     .about {
       position: relative;
       overflow: hidden;
@@ -444,7 +465,8 @@ ul.team, ul.cases {
       -o-transition: all .1s ease-in-out;
       transition: all .1s ease-in-out;
       h4, p {color: #fff; padding: 0;}
-      min-height: 21em;
+      min-height: 15em;
+
       display: block;
 
       -webkit-box-sizing: border-box;
@@ -456,7 +478,7 @@ ul.team, ul.cases {
       .description {font-size: .8em;}
 
       ul {margin: 0; padding: 1em 0;}
-      li {list-style: none; margin: 0; border-bottom: none; padding: 0;
+      li {list-style: none; border-bottom: none;
         &:hover {
           .description {
             display: block;
@@ -477,7 +499,7 @@ ul.team, ul.cases {
           }
         }
       &.greg {
-        background: url(../img/content/greg.jpg) center no-repeat;
+        background: url(../img/content/greg.jpg) top center no-repeat;
         background-size: cover;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
@@ -521,6 +543,29 @@ ul.team, ul.cases {
               }
             }
 
+            &.todd {
+              background: url(../img/content/todd.jpg) center no-repeat;
+              background-size: cover;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+              &:hover {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+                }
+              }
+
+              &.ulana {
+                background: url(../img/content/ulana.jpg) center no-repeat;
+                background-size: cover;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                &:hover {
+                  -webkit-filter: grayscale(0%);
+                  filter: grayscale(0%);
+                  }
+                }
+
+
             &.window-shopping {
               background: url(../img/content/healthcare.png) top center no-repeat;
               background-size: cover;
@@ -553,10 +598,10 @@ ul.team, ul.cases {
     z-index: 100;
     position: absolute;
     bottom: -200%;
-    padding: .75em 1em;
+    padding: .75em .5em;
     height: 100%;
     background: rgba($primary-color,.85);
-    p, a, li {font-size: 15px !important; font-weight: 500;
+    p, a, li {font-size: 14px !important; font-weight: 500;
     line-height: 1.35em;
     }
     li {line-height: 1.5em;}
@@ -592,11 +637,13 @@ ul.cases li {
   a {
     display: block;
     padding: .5em;
-    background: rgba(0,0,0,.05);
-    &:hover {background: rgba(0,0,0,.1);}
-    border-bottom: none;
+    border: 2px solid $primary-color;
+    &:hover {
+      background: $primary-color;
+      h3, {color: #fff;}
+      }
     text-decoration: none;
-    h3 {display: block; padding: 0; margin: 0; font-size: 1.25em;}
+    h3 {display: block; padding: 0 0 1em 0; margin: 0; color: $secondary-color; margin: 0; font-size: 1.25em;}
   }
   .name {
     -webkit-transition: all .24s ease-in-out;
