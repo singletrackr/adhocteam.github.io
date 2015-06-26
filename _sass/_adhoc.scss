@@ -565,6 +565,17 @@ ul.team, ul.cases {
                   }
                 }
 
+                &.michael {
+                  background: url(../img/content/michael.jpg) center no-repeat;
+                  background-size: cover;
+                  -webkit-filter: grayscale(100%);
+                  filter: grayscale(100%);
+                  &:hover {
+                    -webkit-filter: grayscale(0%);
+                    filter: grayscale(0%);
+                    }
+                  }
+
 
             &.window-shopping {
               background: url(../img/content/healthcare.png) top center no-repeat;
