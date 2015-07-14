@@ -644,6 +644,12 @@ ul.team, ul.cases {
   }
 }
 
+html.touch ul.team {
+  li {
+    -webkit-filter: grayscale(0%) !important;
+  }
+}
+
 ul.cases li {
   a {
     display: block;
