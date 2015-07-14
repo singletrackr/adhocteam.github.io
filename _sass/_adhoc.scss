@@ -944,7 +944,8 @@ button#trigger-overlay {
 .icon {
   display: none;
   @media #{$small} {display: inline-block;}
-	width: 1.1em;
-	height: 1.1em;
+	width: 1.2em;
+  padding: .1em;
+	height: 1.2em;
 	fill: currentColor;
 }
