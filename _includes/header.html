@@ -83,21 +83,7 @@ if (typeof console !== 'undefined' && typeof console.log === 'function') {
  new WOW().init();
 </script>
 
-<script type="text/javascript">
 
-  Modernizr.load({
-      test: Modernizr.touch,
-      yep : ['/assets/js/vendor/jquery.smooth-scroll.js',
-            '/assets/js/vendor/scroll-settings.js'],
-
-
-      nope : ['/assets/js/vendor/jquery.stellar.js',
-            '/assets/js/vendor/jquery.smooth-scroll.js',
-            '/assets/js/vendor/scroll-settings.js',
-            '/assets/js/vendor/stellar-settings.js']
-  });
-
-</script>
 
 </head>
 <body class="{{ page.layout }} post{{ page.id | replace:"/","-" }}">
