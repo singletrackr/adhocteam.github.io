@@ -611,6 +611,7 @@ ul.team, ul.cases {
     bottom: -200%;
     padding: .75em .5em;
     height: 100%;
+    z-index: 900;
     background: rgba($primary-color,.85);
     p, a, li {font-size: 14px !important; font-weight: 500;
     line-height: 1.35em;
@@ -627,6 +628,7 @@ ul.team, ul.cases {
     .description {
       position: absolute;
       bottom: 0em;
+      z-index: 900;
     }
   }
 
