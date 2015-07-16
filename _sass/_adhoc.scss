@@ -442,7 +442,7 @@ blockquote {
 
 // Team Block Grids
 
-ul.team, ul.cases {
+html.no-touch ul.team, ul.cases {
   li {
     position: relative;
     .name {
@@ -649,7 +649,68 @@ ul.team, ul.cases {
 html.touch ul.team {
   li {
     -webkit-filter: grayscale(0%) !important;
+    margin-bottom: 2em;
+    ul {margin: .5em 0; padding: 0;}
+    ul li {list-style: none; padding: 0; margin: 0;}
+    a {color: #fff; margin: 0; padding: 0;}
+
+    .name {
+      color: #fff;
+      background: rgba(0,0,0,.25);
+      padding: .5em;
+      margin: 0 0 12em 0;
+      @media #{$medium} {margin: 0 0 11em 0;}
+      h3 {color: #fff; padding: 0; margin: 0; font-size: 1.3em !important;}
+      p.title {padding: 0; margin: 0; color: #fff;}
+    }
+    .description {
+      color: #fff;
+      padding: .85em;
+      p {color: #fff; font-size: .95em;}
+      background: $primary-color;
+    }
+
+    .about.paul {
+      background: url(../img/content/paul.jpg) top center no-repeat;
+      background-size: contain;
+      }
+
+      .about.greg {
+        background: url(../img/content/greg.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.bill {
+        background: url(../img/content/bill.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.danny {
+        background: url(../img/content/danny.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.mike {
+        background: url(../img/content/mike.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.todd {
+        background: url(../img/content/todd.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.ulana {
+        background: url(../img/content/ulana.jpg) top center no-repeat;
+        background-size: contain;
+      }
+
+      .about.michael {
+        background: url(../img/content/michael.jpg) top center no-repeat;
+        background-size: contain;
+      }
   }
+
 }
 
 ul.cases li {
